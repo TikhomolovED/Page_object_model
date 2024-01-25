@@ -1,10 +1,12 @@
+from constants import Constants
+from locators import LocatorsHomePage
 from page_object.home_page import HomePage
-from page_object.home_page import LocatorsHomePage
+
 
 class TestImoptantQuestions:
     def test_important_questions_bring_chargers(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.BRING_CHARGERS)
         home_page.find_element_located(LocatorsHomePage.BRING_CHARGERS).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_BRING_CHARGERS)
@@ -13,7 +15,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_extend_time(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.EXTEND_THE_TIME)
         home_page.find_element_located(LocatorsHomePage.EXTEND_THE_TIME).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_EXTEND_THE_TIME)
@@ -22,7 +24,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_how_calculate_time(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.HOW_CALCULATE_TIME)
         home_page.find_element_located(LocatorsHomePage.HOW_CALCULATE_TIME).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_HOW_CALCULATE_TIME)
@@ -31,7 +33,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_price(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.WHAT_IS_THE_PRICE)
         home_page.find_element_located(LocatorsHomePage.WHAT_IS_THE_PRICE).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_WHAT_IS_THE_PRICE)
@@ -40,7 +42,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_is_possible_cancel_order(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.IS_POSSIBLE_CANCEL_ORDER)
         home_page.find_element_located(LocatorsHomePage.IS_POSSIBLE_CANCEL_ORDER).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_IS_POSSIBLE_CANCEL_ORDER)
@@ -49,7 +51,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_is_possible_today(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.IS_POSSIBLE_TODAY)
         home_page.find_element_located(LocatorsHomePage.IS_POSSIBLE_TODAY).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_IS_POSSIBLE_TODAY)
@@ -58,7 +60,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_live_outside_from_mcad(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.LIVE_OUTSIDE_FROM_MCAD)
         home_page.find_element_located(LocatorsHomePage.LIVE_OUTSIDE_FROM_MCAD).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_LIVE_OUTSIDE_FROM_MCAD)
@@ -67,7 +69,7 @@ class TestImoptantQuestions:
 
     def test_important_questions_any_scooters(self,driver):
         home_page = HomePage(driver)
-        home_page.go_to_site('https://qa-scooter.praktikum-services.ru/')
+        home_page.go_to_site(Constants.URL)
         home_page.scroll_to_element(LocatorsHomePage.WANTS_ANY_SCOOTERS_AT_ONCE)
         home_page.find_element_located(LocatorsHomePage.WANTS_ANY_SCOOTERS_AT_ONCE).click()
         current_text = home_page.get_text_from_opened_questions(LocatorsHomePage.AN_WANTS_ANY_SCOOTERS_AT_ONCE)

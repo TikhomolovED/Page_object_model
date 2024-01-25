@@ -6,3 +6,9 @@ requirements - файл с зависимостями
 conftest - файл с фикстурами
 dir allure_results - результаты отчета allure
 dir page_object - описание методов/локаторов для страниц
+
+Команда для запуска тестов
+python -m pytest  --alluredir ./allure_results
+
+Составление отчета allure
+allure serve ./allure_results/
